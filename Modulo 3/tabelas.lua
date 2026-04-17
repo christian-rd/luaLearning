@@ -57,3 +57,57 @@ bopeFeminino = {
 print(bopeFeminino._config.permiossions[1])
 print(bopeFeminino.Uniforme.p0[1])
 print(bopeFeminino.Uniforme[6][3])
+
+-- Funções dentro de tabelas
+
+local tabletFunction = {
+    [1] = function ()
+        return 'funcao na tabela'
+    end,
+    exemplo2 = function (mensagem)
+        print(mensagem)
+    end
+}
+
+print(tabletFunction[1]())
+tabletFunction.exemplo2('parametro qualquer')
+
+-- # Inserir dados na tabelas
+-- 2 formas de inserir dados (de forma simples)
+-- 1) Inserir seguindo a ordem índice númerica; 1 2 3 etc.
+    -- tablet.insert(nomeDaTabela, dado)
+
+local tableOne = {}
+
+table.insert(tableOne, 'panela')
+table.insert(tableOne, 'cao')
+table.insert(tableOne, 'vento')
+
+print(tableOne[1])
+print(tableOne[2])
+print(tableOne[3])
+
+table.remove(tableOne, 1)
+
+print(tableOne[1])
+print(tableOne[2])
+print(tableOne[3])
+
+-- 2) Inserir um valor determinando a chave/indice   
+    -- adicionando valor igual se declara variavel
+
+local tableTwo = {}
+
+tableTwo[1] = 'testando'
+tableTwo[25] = 'texto qualquer'
+tableTwo[10] = 157
+tableTwo[10] = 565 -- podendo alterar o valor tbm
+tableTwo.nome = 'Fulano'
+
+print(tableTwo[1])
+print(tableTwo[25])
+print(tableTwo[10])
+print(tableTwo.nome)
+
+tableTwo[1] = nil
+print(tableTwo[1])
