@@ -1,0 +1,4 @@
+-- Bibliotecas e Funções em LIBS
+-- LIB (Library - biblioteca)
+-- libs
+    -- conjunto de funções organizados em uma estrutura de dados
